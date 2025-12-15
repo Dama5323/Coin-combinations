@@ -39,35 +39,28 @@ There are 3 ways to make 11 using coins [2, 3, 5] ignoring order.
 
 This problem is solved using **Dynamic Programming (DP)**:
 
-1. Subproblems: Count ways to make sum `s` using coins seen so far.
-2. Decisions:
+1. **Subproblems**: Count ways to make sum `s` using coins seen so far.
+2. **Decisions**:
    - Skip the current coin → move to next coin
    - Pick the current coin (if sum allows) → reduce the sum
-3. DP Array: `dp[s]` = number of ways to make sum `s`.
-4. Transition Formula:  
+3. **DP Array**: `dp[s]` = number of ways to make sum `s`.
+4. **Transition Formula**:  
+    -  dp[s] += dp[s - coin] (mod 10^9 + 7)
 
-### dp[s] += dp[s - coin] (mod 10^9 + 7)
-
-5. Base Case: `dp[0] = 1` → One way to make sum 0 (use no coins).
+5. **Base Case**: `dp[0] = 1` → One way to make sum 0 (use no coins).
 
 ### Usage
-
-```bash
 # Run the program
+```bash
 python coin_combinations.py
+```
 
 # Example input (stdin):
-```
-3 11
-```
-```
-2 3 5
-```
+- 3 11
+- 2 3 5
 
 # Expected output:
-```
-3
-```
+- 3
 
 ### Features
 
