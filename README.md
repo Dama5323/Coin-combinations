@@ -11,9 +11,11 @@ Given `n` types of coins with positive integer values and a target sum `X`, calc
 
 **Constraints:**
 
-- \( 1 \le n \le 100 \)
-- \( 1 \le x \le 10^6 \)
-- \( 1 \le c_i \le 10^6 \)  
+Constraints:
+- 1 ≤ n ≤ 100
+- 1 ≤ x ≤ 10^6
+- 1 ≤ c_i ≤ 10^6
+ 
 
 **Example:**
 
@@ -26,16 +28,14 @@ Input:
 ```
 Output:
 3
+ 
 
-### 
-
-```yaml
-
-Explanation: There are 3 ways to make 11 using coins [2, 3, 5] ignoring order.
+### Explanation: 
+There are 3 ways to make 11 using coins [2, 3, 5] ignoring order.
 
 ---
 
-## Solution
+### Solution
 
 This problem is solved using **Dynamic Programming (DP)**:
 
@@ -45,25 +45,27 @@ This problem is solved using **Dynamic Programming (DP)**:
    - Pick the current coin (if sum allows) → reduce the sum
 3. DP Array: `dp[s]` = number of ways to make sum `s`.
 4. Transition Formula:  
-```
 
 ### dp[s] += dp[s - coin] (mod 10^9 + 7)
-``` yaml
+
 5. Base Case: `dp[0] = 1` → One way to make sum 0 (use no coins).
 
----
-
-## Usage
+### Usage
 
 ```bash
 # Run the program
 python coin_combinations.py
 
 # Example input (stdin):
+```
 3 11
+```
+```
 2 3 5
+```
 
 # Expected output:
+```
 3
 ```
 
