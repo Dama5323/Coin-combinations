@@ -18,9 +18,12 @@ Given `n` types of coins with positive integer values and a target sum `X`, calc
 **Example:**
 
 Input:
+``` 
 3 11
+```
+```
 2 3 5
-
+```
 Output:
 3
 
