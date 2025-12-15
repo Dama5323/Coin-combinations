@@ -50,24 +50,23 @@ This problem is solved using **Dynamic Programming (DP)**:
 5. **Base Case**: `dp[0] = 1` → One way to make sum 0 (use no coins).
 
 ### Usage
-# Run the program
+- Run the program
 ```bash
 python coin_combinations.py
 ```
 
-# Example input (stdin):
-- 3 11
-- 2 3 5
+- Example input (stdin):
+    - 3 11
+    - 2 3 5
 
-# Expected output:
-- 3
+- Expected output:
+    - 3
 
 ### Features
 
 - Efficient O(n * X) solution.
 - Handles large sums with modulo 
 - Ignores order of coins to avoid duplicate combinations.
-
 
 ### Author
 
